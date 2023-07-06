@@ -1,9 +1,9 @@
-var display = null;
-var equation = null;
-var value_save = null;
-var operation = null;
-var prev_result = null;
-operator = false;
+let display = null;
+let equation = null;
+let value_save = null;
+let operation = null;
+let prev_result = null;
+let operator = false;
 
 function load() {
   display = document.getElementById("display");
@@ -37,8 +37,8 @@ function number(num) {
 }
 
 function dot() {
-  var content = display.innerHTML;
-  var got_dot = content.indexOf(".");
+  let content = display.innerHTML;
+  let got_dot = content.indexOf(".");
 
   if (got_dot == -1) {
     display.innerHTML += ".";
@@ -146,8 +146,8 @@ function divide() {
 }
 
 function result() {
-  var value2 = null;
-  var content = display.innerHTML;
+  let value2 = null;
+  let content = display.innerHTML;
 
   if (value_save != null && content) {
     value2 = parseFloat(content);
